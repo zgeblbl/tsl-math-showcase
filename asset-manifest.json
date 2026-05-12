@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tsl-math-showcase/static/css/main.d505cf48.css",
+    "main.js": "/tsl-math-showcase/static/js/main.037e4fdd.js",
+    "index.html": "/tsl-math-showcase/index.html",
+    "main.d505cf48.css.map": "/tsl-math-showcase/static/css/main.d505cf48.css.map",
+    "main.037e4fdd.js.map": "/tsl-math-showcase/static/js/main.037e4fdd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d505cf48.css",
+    "static/js/main.037e4fdd.js"
+  ]
+}
