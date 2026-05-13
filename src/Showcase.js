@@ -23,6 +23,15 @@ const Showcase = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
+  const handleVideoClick = (e) => {
+    const video = e.target;
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  };
+
   const videoData = [
     { 
       id: 1, 
@@ -112,21 +121,26 @@ const Showcase = () => {
           {videoData.map((video) => (
             <SwiperSlide key={video.id}>
               <div className="feature-card">
-                <div className="video-placeholder">
+                <div className="video-placeholder" style={{ position: 'relative' }}>
                   <video 
                     key={video.id} 
-                    autoPlay 
-                    loop 
                     muted 
                     playsInline 
-                    preload="auto"
+                    preload="metadata"
                     className="feature-video"
-                    /* Bazı tarayıcılar için JS ile oynatma desteği */
-                    onCanPlay={(e) => e.target.play()} 
+                    onClick={handleVideoClick} // Tıklayınca oynat/durdur
+                    /* loop kaldırıldı, autoPlay kaldırıldı */
                   >
                     <source src={video.src} type="video/mp4" />
-                    Tarayıcınız video oynatmayı desteklemiyor.
                   </video>
+                  
+                  {/* Üçgen Oynat İkonu (Video duruyorsa görünür) */}
+                  <div className="play-overlay" onClick={(e) => {
+                    const v = e.currentTarget.previousSibling;
+                    v.play();
+                  }}>
+                    <div className="play-triangle"></div>
+                  </div>
                 </div>
                 <h3>{video.title}</h3>
                 <p className="desc">{video.desc}</p>

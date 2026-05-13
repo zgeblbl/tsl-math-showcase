@@ -265,8 +265,42 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+.feature-video:not(:paused) + .play-overlay {
+  display: none;
+}
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 92, 246, 0.8); /* Tema rengin: Mor */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Tıklamayı alttaki videoya geçirir */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+.play-triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 18px solid white;
+  border-bottom: 10px solid transparent;
+  margin-left: 4px; /* Üçgeni tam ortalamak için */
 }
 
+
+.feature-card:hover .play-overlay {
+  background: var(--primary);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.6); /* Parlama artar */
+}
 /* Videonun kendisi */
 .feature-video {
   width: 100%;        /* Kutunun genişliğine zorlar */
