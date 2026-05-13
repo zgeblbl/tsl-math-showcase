@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/tsl-math-showcase/static/css/main.d505cf48.css",
-    "main.js": "/tsl-math-showcase/static/js/main.037e4fdd.js",
+    "main.css": "/tsl-math-showcase/static/css/main.1522afd8.css",
+    "main.js": "/tsl-math-showcase/static/js/main.75fffcec.js",
+    "static/media/zge1.jpeg": "/tsl-math-showcase/static/media/zge1.21be8b3fe44b9767b76d.jpeg",
+    "static/media/bb.jpeg": "/tsl-math-showcase/static/media/bb.459f424c772c0f4c50cc.jpeg",
     "index.html": "/tsl-math-showcase/index.html",
-    "main.d505cf48.css.map": "/tsl-math-showcase/static/css/main.d505cf48.css.map",
-    "main.037e4fdd.js.map": "/tsl-math-showcase/static/js/main.037e4fdd.js.map"
+    "main.1522afd8.css.map": "/tsl-math-showcase/static/css/main.1522afd8.css.map",
+    "main.75fffcec.js.map": "/tsl-math-showcase/static/js/main.75fffcec.js.map"
   },
   "entrypoints": [
-    "static/css/main.d505cf48.css",
-    "static/js/main.037e4fdd.js"
+    "static/css/main.1522afd8.css",
+    "static/js/main.75fffcec.js"
   ]
 }
